@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "craft",
+    "packageName": "com.ju.craft",
+    "packageFolder": "com/ju/craft",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "23f2c9a434cab02f134de11a6c70b1ccb014b428",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}

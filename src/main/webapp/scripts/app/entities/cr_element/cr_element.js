@@ -64,6 +64,8 @@ angular.module('craftApp')
                                     el_nom_court_fr_fr: null,
                                     el_nom_long_fr_fr: null,
                                     el_description_fr_fr: null,
+                                    el_num_atomique: null,
+                                    el_point_fusion: null,
                                     id: null
                                 };
                             }

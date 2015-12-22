@@ -36,6 +36,12 @@ public class Cr_element implements Serializable {
     @Column(name = "el_description_fr_fr")
     private String el_description_fr_fr;
 
+    @Column(name = "el_num_atomique")
+    private Integer el_num_atomique;
+
+    @Column(name = "el_point_fusion")
+    private Integer el_point_fusion;
+
     @ManyToOne
     @JoinColumn(name = "cr_rarete_id")
     private Cr_rarete cr_rarete;
@@ -93,6 +99,22 @@ public class Cr_element implements Serializable {
 
     public void setEl_description_fr_fr(String el_description_fr_fr) {
         this.el_description_fr_fr = el_description_fr_fr;
+    }
+
+    public Integer getEl_num_atomique() {
+        return el_num_atomique;
+    }
+
+    public void setEl_num_atomique(Integer el_num_atomique) {
+        this.el_num_atomique = el_num_atomique;
+    }
+
+    public Integer getEl_point_fusion() {
+        return el_point_fusion;
+    }
+
+    public void setEl_point_fusion(Integer el_point_fusion) {
+        this.el_point_fusion = el_point_fusion;
     }
 
     public Cr_rarete getCr_rarete() {
@@ -159,6 +181,8 @@ public class Cr_element implements Serializable {
             ", el_nom_court_fr_fr='" + el_nom_court_fr_fr + "'" +
             ", el_nom_long_fr_fr='" + el_nom_long_fr_fr + "'" +
             ", el_description_fr_fr='" + el_description_fr_fr + "'" +
+            ", el_num_atomique='" + el_num_atomique + "'" +
+            ", el_point_fusion='" + el_point_fusion + "'" +
             '}';
     }
 }

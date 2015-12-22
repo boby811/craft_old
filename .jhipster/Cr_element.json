@@ -58,6 +58,16 @@
             "fieldId": 3,
             "fieldName": "el_description_fr_fr",
             "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "el_num_atomique",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "el_point_fusion",
+            "fieldType": "Integer"
         }
     ],
     "changelogDate": "20151222084805",

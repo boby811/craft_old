@@ -18,6 +18,8 @@
             "el_nom_court_fr_fr": "El_nom_court_fr_fr",
             "el_nom_long_fr_fr": "El_nom_long_fr_fr",
             "el_description_fr_fr": "El_description_fr_fr",
+            "el_num_atomique": "El_num_atomique",
+            "el_point_fusion": "El_point_fusion",
             "cr_rarete": "Cr_rarete",
             "cr_image": "Cr_image",
             "cr_corps_element": "Cr_corps_element",

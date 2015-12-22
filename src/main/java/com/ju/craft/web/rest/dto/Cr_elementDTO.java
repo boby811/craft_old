@@ -22,6 +22,10 @@ public class Cr_elementDTO implements Serializable {
 
     private String el_description_fr_fr;
 
+    private Integer el_num_atomique;
+
+    private Integer el_point_fusion;
+
     private Long cr_rareteId;
 
     private String cr_rareteRa_libelle_fr_fr;
@@ -58,6 +62,22 @@ public class Cr_elementDTO implements Serializable {
 
     public void setEl_description_fr_fr(String el_description_fr_fr) {
         this.el_description_fr_fr = el_description_fr_fr;
+    }
+
+    public Integer getEl_num_atomique() {
+        return el_num_atomique;
+    }
+
+    public void setEl_num_atomique(Integer el_num_atomique) {
+        this.el_num_atomique = el_num_atomique;
+    }
+
+    public Integer getEl_point_fusion() {
+        return el_point_fusion;
+    }
+
+    public void setEl_point_fusion(Integer el_point_fusion) {
+        this.el_point_fusion = el_point_fusion;
     }
 
     public Long getCr_rareteId() {
@@ -112,6 +132,8 @@ public class Cr_elementDTO implements Serializable {
             ", el_nom_court_fr_fr='" + el_nom_court_fr_fr + "'" +
             ", el_nom_long_fr_fr='" + el_nom_long_fr_fr + "'" +
             ", el_description_fr_fr='" + el_description_fr_fr + "'" +
+            ", el_num_atomique='" + el_num_atomique + "'" +
+            ", el_point_fusion='" + el_point_fusion + "'" +
             '}';
     }
 }

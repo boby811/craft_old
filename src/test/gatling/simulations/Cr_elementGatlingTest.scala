@@ -67,7 +67,7 @@ class Cr_elementGatlingTest extends Simulation {
             .exec(http("Create new cr_element")
             .post("/api/cr_elements")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "el_nom_court_fr_fr":"SAMPLE_TEXT", "el_nom_long_fr_fr":"SAMPLE_TEXT", "el_description_fr_fr":"SAMPLE_TEXT"}""")).asJSON
+            .body(StringBody("""{"id":null, "el_nom_court_fr_fr":"SAMPLE_TEXT", "el_nom_long_fr_fr":"SAMPLE_TEXT", "el_description_fr_fr":"SAMPLE_TEXT", "el_num_atomique":"0", "el_point_fusion":"0"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_cr_element_url")))
             .pause(10)

@@ -28,6 +28,8 @@
                 <constraints nullable="false" />
             </column>
             <column name="el_description_fr_fr" type="varchar(255)"/>
+            <column name="el_num_atomique" type="integer"/>
+            <column name="el_point_fusion" type="integer"/>
             <column name="cr_rarete_id" type="bigint"/>
         </createTable>
         

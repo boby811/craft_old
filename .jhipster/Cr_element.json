@@ -53,6 +53,11 @@
             "fieldValidateRules": [
                 "required"
             ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "el_description_fr_fr",
+            "fieldType": "String"
         }
     ],
     "changelogDate": "20151222084805",

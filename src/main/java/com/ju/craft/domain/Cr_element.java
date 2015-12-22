@@ -33,6 +33,9 @@ public class Cr_element implements Serializable {
     @Column(name = "el_nom_long_fr_fr", nullable = false)
     private String el_nom_long_fr_fr;
 
+    @Column(name = "el_description_fr_fr")
+    private String el_description_fr_fr;
+
     @ManyToOne
     @JoinColumn(name = "cr_rarete_id")
     private Cr_rarete cr_rarete;
@@ -82,6 +85,14 @@ public class Cr_element implements Serializable {
 
     public void setEl_nom_long_fr_fr(String el_nom_long_fr_fr) {
         this.el_nom_long_fr_fr = el_nom_long_fr_fr;
+    }
+
+    public String getEl_description_fr_fr() {
+        return el_description_fr_fr;
+    }
+
+    public void setEl_description_fr_fr(String el_description_fr_fr) {
+        this.el_description_fr_fr = el_description_fr_fr;
     }
 
     public Cr_rarete getCr_rarete() {
@@ -147,6 +158,7 @@ public class Cr_element implements Serializable {
             "id=" + id +
             ", el_nom_court_fr_fr='" + el_nom_court_fr_fr + "'" +
             ", el_nom_long_fr_fr='" + el_nom_long_fr_fr + "'" +
+            ", el_description_fr_fr='" + el_description_fr_fr + "'" +
             '}';
     }
 }

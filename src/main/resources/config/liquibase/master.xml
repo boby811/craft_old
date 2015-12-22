@@ -16,5 +16,6 @@
     <include file="classpath:config/liquibase/changelog/20151222085816_added_entity_Cr_corps_element.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20151222093330_added_entity_Cr_categorie_craft.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20151222093702_added_entity_Cr_objet_craft.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151222130836_changelog.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-005 - JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

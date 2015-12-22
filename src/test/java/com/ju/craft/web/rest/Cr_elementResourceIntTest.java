@@ -48,6 +48,8 @@ public class Cr_elementResourceIntTest {
     private static final String UPDATED_EL_NOM_COURT_FR_FR = "BBBBB";
     private static final String DEFAULT_EL_NOM_LONG_FR_FR = "AAAAA";
     private static final String UPDATED_EL_NOM_LONG_FR_FR = "BBBBB";
+    private static final String DEFAULT_EL_DESCRIPTION_FR_FR = "AAAAA";
+    private static final String UPDATED_EL_DESCRIPTION_FR_FR = "BBBBB";
 
     @Inject
     private Cr_elementRepository cr_elementRepository;
@@ -85,6 +87,7 @@ public class Cr_elementResourceIntTest {
         cr_element = new Cr_element();
         cr_element.setEl_nom_court_fr_fr(DEFAULT_EL_NOM_COURT_FR_FR);
         cr_element.setEl_nom_long_fr_fr(DEFAULT_EL_NOM_LONG_FR_FR);
+        cr_element.setEl_description_fr_fr(DEFAULT_EL_DESCRIPTION_FR_FR);
     }
 
     @Test
@@ -106,6 +109,7 @@ public class Cr_elementResourceIntTest {
         Cr_element testCr_element = cr_elements.get(cr_elements.size() - 1);
         assertThat(testCr_element.getEl_nom_court_fr_fr()).isEqualTo(DEFAULT_EL_NOM_COURT_FR_FR);
         assertThat(testCr_element.getEl_nom_long_fr_fr()).isEqualTo(DEFAULT_EL_NOM_LONG_FR_FR);
+        assertThat(testCr_element.getEl_description_fr_fr()).isEqualTo(DEFAULT_EL_DESCRIPTION_FR_FR);
     }
 
     @Test
@@ -158,7 +162,8 @@ public class Cr_elementResourceIntTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(cr_element.getId().intValue())))
                 .andExpect(jsonPath("$.[*].el_nom_court_fr_fr").value(hasItem(DEFAULT_EL_NOM_COURT_FR_FR.toString())))
-                .andExpect(jsonPath("$.[*].el_nom_long_fr_fr").value(hasItem(DEFAULT_EL_NOM_LONG_FR_FR.toString())));
+                .andExpect(jsonPath("$.[*].el_nom_long_fr_fr").value(hasItem(DEFAULT_EL_NOM_LONG_FR_FR.toString())))
+                .andExpect(jsonPath("$.[*].el_description_fr_fr").value(hasItem(DEFAULT_EL_DESCRIPTION_FR_FR.toString())));
     }
 
     @Test
@@ -173,7 +178,8 @@ public class Cr_elementResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(cr_element.getId().intValue()))
             .andExpect(jsonPath("$.el_nom_court_fr_fr").value(DEFAULT_EL_NOM_COURT_FR_FR.toString()))
-            .andExpect(jsonPath("$.el_nom_long_fr_fr").value(DEFAULT_EL_NOM_LONG_FR_FR.toString()));
+            .andExpect(jsonPath("$.el_nom_long_fr_fr").value(DEFAULT_EL_NOM_LONG_FR_FR.toString()))
+            .andExpect(jsonPath("$.el_description_fr_fr").value(DEFAULT_EL_DESCRIPTION_FR_FR.toString()));
     }
 
     @Test
@@ -195,6 +201,7 @@ public class Cr_elementResourceIntTest {
         // Update the cr_element
         cr_element.setEl_nom_court_fr_fr(UPDATED_EL_NOM_COURT_FR_FR);
         cr_element.setEl_nom_long_fr_fr(UPDATED_EL_NOM_LONG_FR_FR);
+        cr_element.setEl_description_fr_fr(UPDATED_EL_DESCRIPTION_FR_FR);
         Cr_elementDTO cr_elementDTO = cr_elementMapper.cr_elementToCr_elementDTO(cr_element);
 
         restCr_elementMockMvc.perform(put("/api/cr_elements")
@@ -208,6 +215,7 @@ public class Cr_elementResourceIntTest {
         Cr_element testCr_element = cr_elements.get(cr_elements.size() - 1);
         assertThat(testCr_element.getEl_nom_court_fr_fr()).isEqualTo(UPDATED_EL_NOM_COURT_FR_FR);
         assertThat(testCr_element.getEl_nom_long_fr_fr()).isEqualTo(UPDATED_EL_NOM_LONG_FR_FR);
+        assertThat(testCr_element.getEl_description_fr_fr()).isEqualTo(UPDATED_EL_DESCRIPTION_FR_FR);
     }
 
     @Test

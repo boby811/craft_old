@@ -20,6 +20,8 @@ public class Cr_elementDTO implements Serializable {
     @NotNull
     private String el_nom_long_fr_fr;
 
+    private String el_description_fr_fr;
+
     private Long cr_rareteId;
 
     private String cr_rareteRa_libelle_fr_fr;
@@ -48,6 +50,14 @@ public class Cr_elementDTO implements Serializable {
 
     public void setEl_nom_long_fr_fr(String el_nom_long_fr_fr) {
         this.el_nom_long_fr_fr = el_nom_long_fr_fr;
+    }
+
+    public String getEl_description_fr_fr() {
+        return el_description_fr_fr;
+    }
+
+    public void setEl_description_fr_fr(String el_description_fr_fr) {
+        this.el_description_fr_fr = el_description_fr_fr;
     }
 
     public Long getCr_rareteId() {
@@ -101,6 +111,7 @@ public class Cr_elementDTO implements Serializable {
             "id=" + id +
             ", el_nom_court_fr_fr='" + el_nom_court_fr_fr + "'" +
             ", el_nom_long_fr_fr='" + el_nom_long_fr_fr + "'" +
+            ", el_description_fr_fr='" + el_description_fr_fr + "'" +
             '}';
     }
 }

@@ -27,6 +27,7 @@
             <column name="el_nom_long_fr_fr" type="varchar(255)">
                 <constraints nullable="false" />
             </column>
+            <column name="el_description_fr_fr" type="varchar(255)"/>
             <column name="cr_rarete_id" type="bigint"/>
         </createTable>
         

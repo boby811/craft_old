@@ -63,6 +63,7 @@ angular.module('craftApp')
                                 return {
                                     el_nom_court_fr_fr: null,
                                     el_nom_long_fr_fr: null,
+                                    el_description_fr_fr: null,
                                     id: null
                                 };
                             }

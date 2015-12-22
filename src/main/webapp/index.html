@@ -14,6 +14,26 @@
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css" />
         <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.css" />
+        <link rel="import" href="bower_components/paper-item/paper-item.html">
+		<link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+  		<link rel="import" href="bower_components/paper-listbox/paper-listbox.html">
+ 		<link rel="import" href="bower_components/paper-styles/demo-pages.html">
+ 		<link rel="import" href="bower_components/paper-styles/paper-styles.html">
+ 		<link rel="import" href="bower_components/iron-checked-element-behavior/iron-checked-element-behavior.html">
+ 		<link rel="import" href="bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html.html">
+ 		<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+ 		<link rel="import" href="bower_components/iron-validatable-behavior/iron-validatable-behavior.html">
+ 		<link rel="import" href="bower_components/iron-selector/iron-selector.html">
+ 		<link rel="import" href="bower_components/iron-meta/iron-meta.html">
+ 		<link rel="import" href="bower_components/iron-menubar-behavior/iron-menubar-behavior.html">
+ 		<link rel="import" href="bower_components/iron-menu-behavior/iron-menu-behavior.html">
+ 		<link rel="import" href="bower_components/iron-form-element-behavior/iron-form-element-behavior.html">
+ 		<link rel="import" href="bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html">
+	  <link rel="import" href="bower_components/paper-card.html">
+	  <link rel="import" href="bower_components/paper-button/paper-button.html">
+	  <link rel="import" href="bower_components/paper-styles/color.html">
+	    <link rel="import" href="bower_components/paper-card/paper-card.html">
+	  
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
@@ -71,6 +91,8 @@
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
         <script src="bower_components/sockjs-client/dist/sockjs.js"></script>
         <script src="bower_components/stomp-websocket/lib/stomp.min.js"></script>
+  		<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+        
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -241,5 +263,27 @@
     $.material.init();
     $.material.ripples();
     </script>
+    <style is="custom-style">
+    .horizontal-section {
+      padding: 0 !important;
+    }
+    .avatar {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #ccc;
+    }
+    paper-item {
+      --paper-item: {
+        cursor: pointer;
+      };
+    }
+    .sublist {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  </style>
 </body>
 </html>

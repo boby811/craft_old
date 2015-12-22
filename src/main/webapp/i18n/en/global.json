@@ -7,6 +7,17 @@
             "jhipster-needle-003": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
+                "cr_rarete": "Cr_rarete",
+                "cr_type_corps": "Cr_type_corps",
+                "cr_image": "Cr_image",
+                "cr_puissance": "Cr_puissance",
+                "cr_element": "Cr_element",
+                "cr_systeme": "Cr_systeme",
+                "cr_systeme_element": "Cr_systeme_element",
+                "cr_corps": "Cr_corps",
+                "cr_corps_element": "Cr_corps_element",
+                "cr_categorie_craft": "Cr_categorie_craft",
+                "cr_objet_craft": "Cr_objet_craft",
                 "jhipster-needle-004": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

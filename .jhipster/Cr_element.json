@@ -1,0 +1,62 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "cr_rarete",
+            "otherEntityName": "cr_rarete",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "ra_libelle_fr_fr"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "cr_image",
+            "otherEntityName": "cr_image",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "im_url",
+            "ownerSide": true
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "cr_corps_element",
+            "otherEntityName": "cr_corps_element",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "cr_element"
+        },
+        {
+            "relationshipId": 4,
+            "relationshipName": "cr_objet_craft",
+            "otherEntityName": "cr_objet_craft",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "cr_element"
+        },
+        {
+            "relationshipId": 5,
+            "relationshipName": "cr_systeme_element",
+            "otherEntityName": "cr_systeme_element",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "cr_element"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "el_nom_court_fr_fr",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "el_nom_long_fr_fr",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151222084805",
+    "dto": "mapstruct",
+    "service": "no",
+    "pagination": "no"
+}

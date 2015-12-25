@@ -2,6 +2,17 @@
 <div>
     <h2><span translate="craftApp.cr_image.detail.title">Cr_image</span> {{cr_image.id}}</h2>
     <div class="table-responsive">
+    <div id="cards">
+			<paper-card id="shadow_demo" heading="Paper Shadows" class="pink"
+				animated-shadow>
+			<div class="card-content"><span class="form-control-static">{{cr_image.im_url}}</span></div>
+			<div class="card-actions">
+				<paper-button onclick="decreaseShadow()">Decrease</paper-button>
+				<paper-button onclick="increaseShadow()">Increase</paper-button>
+			</div>
+			</paper-card>
+		</div>
+    
         <table class="table table-striped">
             <thead>
             <tr>

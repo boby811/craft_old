@@ -1,4 +1,39 @@
+
+<!-- Square card -->
+<style>
+.demo-card-square.mdl-card {
+  width: 230px;
+  height: 160px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+}
+</style>
 <div>
+
+<div class="mdl-grid demo-content">
+<div class="demo-card-square mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col" ng-repeat="cr_rarete in cr_raretes track by cr_rarete.id">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">{{cr_rarete.id}}</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+	{{cr_rarete.ra_libelle_fr_fr}}
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-js-button btn btn-info mdl-js-ripple-effect" ui-sref="cr_rarete.detail({id:cr_rarete.id})">
+      Afficher
+    </a>
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ui-sref="cr_rarete.edit({id:cr_rarete.id})">
+      Modifier
+    </a>
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ui-sref="cr_rarete.edit({id:cr_rarete.id})">
+      Supprimer
+    </a>
+  </div>
+</div>
+</div>
     <h2 translate="craftApp.cr_rarete.home.title">Cr_raretes</h2>
     <jh-alert></jh-alert>
     <div class="container">

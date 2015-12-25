@@ -20,24 +20,30 @@
  		<link rel="import" href="bower_components/paper-styles/demo-pages.html">
  		<link rel="import" href="bower_components/paper-styles/paper-styles.html">
  		<link rel="import" href="bower_components/iron-checked-element-behavior/iron-checked-element-behavior.html">
- 		<link rel="import" href="bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html.html">
+ 		<link rel="import" href="bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html">
  		<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
  		<link rel="import" href="bower_components/iron-validatable-behavior/iron-validatable-behavior.html">
  		<link rel="import" href="bower_components/iron-selector/iron-selector.html">
  		<link rel="import" href="bower_components/iron-meta/iron-meta.html">
- 		<link rel="import" href="bower_components/iron-menubar-behavior/iron-menubar-behavior.html">
+ 		<link rel="import" href="bower_components/iron-menu-behavior/iron-menubar-behavior.html">
  		<link rel="import" href="bower_components/iron-menu-behavior/iron-menu-behavior.html">
  		<link rel="import" href="bower_components/iron-form-element-behavior/iron-form-element-behavior.html">
  		<link rel="import" href="bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html">
-	  <link rel="import" href="bower_components/paper-card.html">
+	  <link rel="import" href="bower_components/paper-card/paper-card.html">
 	  <link rel="import" href="bower_components/paper-button/paper-button.html">
 	  <link rel="import" href="bower_components/paper-styles/color.html">
 	    <link rel="import" href="bower_components/paper-card/paper-card.html">
+	     <link rel="import" href="bower_components/iron-list/iron-list.html">
+	     
+	     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	  
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
         <link rel="stylesheet" href="assets/styles/main.css">
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
         <!-- endbuild -->
     </head>
     <body ng-app="craftApp">
@@ -92,7 +98,7 @@
         <script src="bower_components/sockjs-client/dist/sockjs.js"></script>
         <script src="bower_components/stomp-websocket/lib/stomp.min.js"></script>
   		<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-        
+        <script src="bower_components/angular-material/angular-material.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -258,6 +264,16 @@
     <script src="scripts/app/entities/cr_objet_craft/cr_objet_craft-detail.controller.js"></script>
     <script src="scripts/components/entities/cr_objet_craft/cr_objet_craft.service.js"></script>
     <script src="scripts/components/entities/cr_objet_craft/cr_objet_craft.search.service.js"></script>
+     
+     
+         <!-- Angular Material Dependencies -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
+
+    <!-- Angular Material Javascript now available via Google CDN; version 0.9.4 used here -->
+    <script src="//ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
+    
     <!-- endbuild -->
     <script>
     $.material.init();
@@ -283,6 +299,53 @@
     .sublist {
       padding-left: 20px;
       padding-right: 20px;
+    }
+   
+    body {
+      background-color: var(--paper-grey-50);
+    }
+    #cards {
+      @apply(--layout-vertical);
+      @apply(--center-justified);
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    paper-card {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    .avatar {
+      display: inline-block;
+      height: 64px;
+      width: 64px;
+      border-radius: 50%;
+      background: var(--paper-pink-500);
+      color: white;
+      line-height: 64px;
+      font-size: 30px;
+      text-align: center;
+    }
+    .fancy .title {
+      position: absolute;
+      top: 30px;
+      left: 100px;
+      color: var(--paper-indigo-500);
+    }
+    .fancy img {
+      width: 100%;
+    }
+    .fancy .big {
+      font-size: 22px;
+      padding: 8px 0 16px;
+      color: var(--google-grey-500);
+    }
+    .fancy .medium {
+      font-size: 16px;
+      padding-bottom: 8px;
+    }
+    .pink {
+      --paper-card-header-color: var(--paper-pink-500);
     }
   </style>
 </body>

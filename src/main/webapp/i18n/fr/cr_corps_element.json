@@ -2,15 +2,15 @@
     "craftApp": {
         "cr_corps_element" : {
             "home": {
-                "title": "Cr_corps_elements",
-                "createLabel": "Créer un nouveau Cr_corps_element",
+                "title": "Référencement des éléments par corps céleste",
+                "createLabel": "Déclarer la présence d'un élément sur un système",
                 "createOrEditLabel": "Créer ou éditer un Cr_corps_element"
             },
-            "created": "Un nouveau Cr_corps_element a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Cr_corps_element avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Cr_corps_element avec l'identifiant {{ param }} a été supprimé",
+            "created": "Le référencement de cet élément sur ce corps céléste a été créé avec l'identifiant {{ param }}",
+            "updated": "Le référencement avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le référencement avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Cr_corps_element {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer le référencement {{ id }} ?"
             },
             "detail": {
                 "title": "Cr_corps_element"

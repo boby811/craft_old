@@ -2,15 +2,15 @@
     "craftApp": {
         "cr_type_corps" : {
             "home": {
-                "title": "Cr_type_corpss",
-                "createLabel": "Créer un nouveau Cr_type_corps",
-                "createOrEditLabel": "Créer ou éditer un Cr_type_corps"
+                "title": "Type de corps célestes",
+                "createLabel": "Créer un nouveau type de corps céleste",
+                "createOrEditLabel": "Créer ou éditer un type de corps céleste"
             },
-            "created": "Un nouveau Cr_type_corps a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Cr_type_corps avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Cr_type_corps avec l'identifiant {{ param }} a été supprimé",
+            "created": "Un nouveau type de corps céleste a été créé avec l'identifiant {{ param }}",
+            "updated": "Le type de corps céleste avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le type de corps céleste avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Cr_type_corps {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer le type de corps céleste {{ id }} ?"
             },
             "detail": {
                 "title": "Cr_type_corps"

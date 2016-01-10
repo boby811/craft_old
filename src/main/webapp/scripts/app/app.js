@@ -4,7 +4,7 @@ angular.module('craftApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalpr
     'ngResource', 'ngCookies', 'ngAria', 'ngCacheBuster', 'ngFileUpload',
     'ui.bootstrap', 'ui.router',  'infinite-scroll', 'angular-loading-bar'])
 
-    .run(function ($rootScope, $location, $window, $http, $state, $translate, Language, Auth, Principal, ENV, VERSION) {
+    .run(function ($rootScope, $location, $window, $http, $state, $translate, $timeout, Language, Auth, Principal, ENV, VERSION) {
         // update the window title using params in the following
         // precendence
         // 1. titleKey parameter
@@ -38,7 +38,9 @@ angular.module('craftApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalpr
 
         $rootScope.$on('$stateChangeSuccess',  function(event, toState, toParams, fromState, fromParams) {
             var titleKey = 'global.title' ;
-
+            $timeout(function() {
+                componentHandler.upgradeAllRegistered();
+            });
             // Remember previous state unless we've been redirected to login or we've just
             // reset the state memory after logout. If we're redirected to login, our
             // previousState is already set in the authExpiredInterceptor. If we're going
@@ -53,6 +55,12 @@ angular.module('craftApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalpr
                 titleKey = toState.data.pageTitle;
             }
             updateTitle(titleKey);
+        });
+        
+        $rootScope.$on('$viewContentLoaded', function() {
+            $timeout(function() {
+                componentHandler.upgradeAllRegistered();
+            });
         });
         
         // if the current translation changes, update the window title

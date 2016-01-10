@@ -6,14 +6,17 @@
         <title>craft</title>
         <meta name="description" content="">
         <meta name="google" value="notranslate">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css assets/styles/vendor.css -->
         <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/material-design-lite/material.css" />
         <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css" />
-        <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.css" />
+        
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
@@ -21,14 +24,17 @@
         <!-- endbuild -->
     </head>
     <body ng-app="craftApp">
+    
         <!--[if lt IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
+        <div ng-show="{{ENV === 'dev2'}}" class="development" ng-cloak=""></div>
         <div ui-view="navbar" ng-cloak=""></div>
-        <div class="container">
-            <div class="well" ui-view="content"></div>
-
+        <div class="container mdl-color--grey-100">
+        <!-- Accent-colored raised button with ripple -->
+            <div class="well mdl-color--grey-100" ui-view="content"></div>
+                
+                           
             <div class="footer">
                 <p translate="footer">This is your footer</p>
             </div>
@@ -65,7 +71,7 @@
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
         <script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
-        <script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
+
         <script src="bower_components/json3/lib/json3.js"></script>
         <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
@@ -236,15 +242,61 @@
     <script src="scripts/app/entities/cr_objet_craft/cr_objet_craft-detail.controller.js"></script>
     <script src="scripts/components/entities/cr_objet_craft/cr_objet_craft.service.js"></script>
     <script src="scripts/components/entities/cr_objet_craft/cr_objet_craft.search.service.js"></script>
-    
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
-	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
+  <link rel="stylesheet" href="/bower_components/material-design-lite/material.min.css">
+<script src="/bower_components/material-design-lite/material.min.js"></script>
+
+
     <!-- endbuild -->
     <script>
     $.material.init();
-    $.material.ripples();
     </script>
+    
+    <style is="custom-style">
+    .horizontal-section {
+      padding: 0 !important;
+    }
+    .avatar {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #ccc;
+    }
+    paper-item {
+      --paper-item: {
+        cursor: pointer;
+      };
+    }
+    .sublist {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+   
+    body {
+      background-color: var(--paper-grey-50);
+    }
+.mdl-layout__header-row {
+                padding-left: 20px;
+            }
+            .content {
+                width:100%;
+                background-color: coral;
+                min-height: 100px;
+                position: relative;
+                overflow:hidden;
+                cursor:pointer;
+            }
+            
+  	.demo-card-square.mdl-card {
+	  width: 320px;
+	  height: 370px;
+	}
+	.demo-card-square > .mdl-card__title {
+	  color: #fff;
+	}          
+  </style>
+    
+    
 </body>
 </html>
